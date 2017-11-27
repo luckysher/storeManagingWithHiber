@@ -11,5 +11,10 @@ import java.util.logging.Logger;
 
 
 public class LogFactory {
+	String LoggerName = "Store Manager";
+	Formatter formatter = null;
+	Logger logger = null;
+	
+	
 		
 }
