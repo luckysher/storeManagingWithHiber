@@ -30,5 +30,12 @@ public class LogFactory {
 		this.logger = Logger.getLogger(this.LoggerName);
 		this.formatter = new Formatter();
 	}
+	
+	// set logger name
+	public boolean setLoggerName(String loggerName){
+		this.LoggerName = loggerName;
+		return true;
+	}
+	
 		
 }
