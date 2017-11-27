@@ -43,5 +43,12 @@ public class LogFactory {
 		return this;
 	}
 	
-		
+	// method for printing formatted string
+	public void info(String messFrmt, Object ... arg2){
+		this.formatter.format(messFrmt, arg2);
+		this.logger.info(this.formatter.toString());
+	}
+	
+			this.logger.info(mess);
+	}	
 }
