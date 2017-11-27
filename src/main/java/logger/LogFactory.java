@@ -37,5 +37,11 @@ public class LogFactory {
 		return true;
 	}
 	
+	// return object of this class
+	public LogFactory getLogger(String loggerName){
+		this.LoggerName = loggerName;
+		return this;
+	}
+	
 		
 }
