@@ -16,5 +16,11 @@ public class LogFactory {
 	Logger logger = null;
 	
 	
-		
+	// Constructor for the log Factory class
+	public LogFactory(){		
+		this.logger = Logger.getLogger(this.LoggerName);
+		this.formatter = new Formatter();
+	}
+	
+	
 }
