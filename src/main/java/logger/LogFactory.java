@@ -22,5 +22,13 @@ public class LogFactory {
 		this.formatter = new Formatter();
 	}
 	
-	
+	// Constructor for the log Factory class
+	public LogFactory(String loggerName){
+		if (!loggerName.equals("")){
+			this.LoggerName = loggerName;
+		}		
+		this.logger = Logger.getLogger(this.LoggerName);
+		this.formatter = new Formatter();
+	}
+		
 }
