@@ -20,6 +20,21 @@ public class Item {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public int getPrice() {
+		return price;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setBuyingdate(Date buyingdate) {
+		this.buyingdate = buyingdate;
+	}
+	public Date getBuyingdate() {
+		return buyingdate;
+	}
 	
 		
 }
