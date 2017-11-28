@@ -49,6 +49,9 @@ public class LogFactory {
 		this.logger.info(this.formatter.toString());
 	}
 	
-			this.logger.info(mess);
-	}	
+	// method for printing string without format
+	public void info(String mess){
+		this.logger.info(mess);
+	}
+		
 }
