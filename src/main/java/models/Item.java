@@ -10,6 +10,16 @@ public class Item {
 	private Boolean expire;
 	private String details;
 	
+	public void setId(int id){
+		this.id = id;			
+	}
+	public int getId(){
+		return this.id;
+	}
+	
+	public void setPrice(int price) {
+		this.price = price;
+	}
 	
 		
 }
