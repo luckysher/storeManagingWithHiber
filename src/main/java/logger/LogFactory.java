@@ -59,5 +59,8 @@ public class LogFactory {
 			this.logger.warning(this.formatter.toString());
 	}
 		
-		
+	// method for log warnings
+	public void warning(String mess){
+			this.logger.info(mess);
+	}	
 }
