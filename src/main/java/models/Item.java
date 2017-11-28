@@ -35,6 +35,17 @@ public class Item {
 	public Date getBuyingdate() {
 		return buyingdate;
 	}
-	
+	public void setExpire(Boolean expire) {
+		this.expire = expire;
+	}
+	public Boolean getExpire() {
+		return expire;
+	}
+	public void setDetails(String propertyDetails) {
+		this.details = propertyDetails;
+	}
+	public String getDetails() {
+		return details;
+	}
 		
 }
