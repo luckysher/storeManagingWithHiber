@@ -18,4 +18,9 @@ public class StorageTests extends TestCase{
 		this.logger.info("Testing session connection");
 		this.logger.info("Current session:>>> " + HibernateUtils.getSessionFactory().getCurrentSession());
 	}
+	
+	// testcase for update
+	public void testUpdateRecord()  throws Exception{		
+		
+	}
 }
