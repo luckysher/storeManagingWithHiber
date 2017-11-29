@@ -5,5 +5,8 @@ import java.awt.Toolkit;
 
 public class StorageUiUtils {
 
-	
+	// get available width and height
+	public static Dimension getSceenSize(){
+		return Toolkit.getDefaultToolkit().getScreenSize();
+	}
 }
