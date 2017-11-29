@@ -21,6 +21,11 @@ public class StorageTests extends TestCase{
 	
 	// testcase for update
 	public void testUpdateRecord()  throws Exception{		
-		
+		String name = "Pipe";
+		int id = 3;
+		this.logger.info("Testing update storage");
+		StoreManager man = new StoreManager();
+		man.updateName(id, name);
+		this.logger.info("Updated storage name");
 	}
 }
