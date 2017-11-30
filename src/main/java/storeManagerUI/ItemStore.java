@@ -31,6 +31,12 @@ public class ItemStore extends JPanel {
 		JLabel formLabel = new JLabel("Item store form", JLabel.CENTER);
 		formLabel.setFont(new Font("SansSerif", Font.BOLD, 16));
 		addComponent(gbl, gbc, formLabel);
+
+		gbc.weightx = 1.0;
+		gbc.gridwidth = GridBagConstraints.RELATIVE;
+		JLabel nameLabel = new JLabel("Name", JLabel.CENTER);
+		nameLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
+		addComponent(gbl, gbc, nameLabel);
 		
 				
 		
