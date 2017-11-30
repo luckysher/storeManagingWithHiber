@@ -23,6 +23,17 @@ public class ItemStore extends JPanel {
 		GridBagConstraints gbc = new GridBagConstraints();
 		this.setLayout(gbl);
 		
+		//this.setFont(new Font("SansSerif", Font.BOLD, 14));
+	
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.weightx = 0.0;
+		gbc.gridwidth = GridBagConstraints.REMAINDER;
+		JLabel formLabel = new JLabel("Item store form", JLabel.CENTER);
+		formLabel.setFont(new Font("SansSerif", Font.BOLD, 16));
+		addComponent(gbl, gbc, formLabel);
+		
+				
+		
 	
 	 }	
 	}
