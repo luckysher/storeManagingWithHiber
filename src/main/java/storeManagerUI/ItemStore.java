@@ -42,6 +42,12 @@ public class ItemStore extends JPanel {
 		JTextField namefield = new JTextField();
 		addComponent(gbl, gbc, namefield);
 	
+		gbc.gridwidth = GridBagConstraints.RELATIVE;
+		JLabel priceLabel = new JLabel("Price", JLabel.CENTER);
+		priceLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
+		addComponent(gbl, gbc, priceLabel);
+		
+		
 		
 				
 		
