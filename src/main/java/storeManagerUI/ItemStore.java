@@ -18,4 +18,11 @@ public class ItemStore extends JPanel {
 		add(comp);
 	}
 	
+	public ItemStore(){		
+		GridBagLayout gbl = new GridBagLayout();
+		GridBagConstraints gbc = new GridBagConstraints();
+		this.setLayout(gbl);
+		
+	
+	 }	
 	}
