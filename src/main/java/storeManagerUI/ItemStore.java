@@ -13,8 +13,9 @@ import javax.swing.JTextField;
 
 public class ItemStore extends JPanel {
 	
-			
-		
+	public void addComponent(GridBagLayout gbl, GridBagConstraints gbc, Component comp){
+		gbl.setConstraints(comp, gbc);
+		add(comp);
+	}
 	
-	 }	
 	}
