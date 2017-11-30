@@ -19,5 +19,12 @@ import utils.StorageUiUtils;
 
 public class StoreManUI {
 	
+	String storeUITitle = null;
+	
+	// constructor for the store manager UI
+	public StoreManUI(String title){
+		this.storeUITitle = title;
+	}
+		
 	
 }
