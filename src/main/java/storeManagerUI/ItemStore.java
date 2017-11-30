@@ -38,6 +38,11 @@ public class ItemStore extends JPanel {
 		nameLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
 		addComponent(gbl, gbc, nameLabel);
 		
+		gbc.gridwidth = GridBagConstraints.REMAINDER;
+		JTextField namefield = new JTextField();
+		addComponent(gbl, gbc, namefield);
+	
+		
 				
 		
 	
