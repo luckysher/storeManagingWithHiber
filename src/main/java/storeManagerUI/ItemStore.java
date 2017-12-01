@@ -23,7 +23,7 @@ public class ItemStore extends JPanel {
 		GridBagConstraints gbc = new GridBagConstraints();
 		this.setLayout(gbl);
 		
-		//this.setFont(new Font("SansSerif", Font.BOLD, 14));
+		this.setFont(new Font("SansSerif", Font.BOLD, 14));
 	
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.weightx = 0.0;
