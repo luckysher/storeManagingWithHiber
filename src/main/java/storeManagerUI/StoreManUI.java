@@ -25,6 +25,11 @@ public class StoreManUI {
 	public StoreManUI(String title){
 		this.storeUITitle = title;
 	}
+	// Return Instace of store manager UI
+	public JFrame getStoreUI(){
+		JFrame storeUI = new JFrame(this.storeUITitle);
+				return storeUI;
+	}
 		
 	
 }
