@@ -28,7 +28,11 @@ public class StoreManUI {
 	// Return Instace of store manager UI
 	public JFrame getStoreUI(){
 		JFrame storeUI = new JFrame(this.storeUITitle);
-				return storeUI;
+		//add to panel to container
+		storeUI.add(new Container().add(this.getAllTabs()));
+		
+		storeUI.setSize(StorageUiUtils.getSceenSize());
+		return storeUI;
 	}
 		
 	
