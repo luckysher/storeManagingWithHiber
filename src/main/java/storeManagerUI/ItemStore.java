@@ -33,7 +33,11 @@ public class ItemStore extends JPanel {
 		// Set Name label and text field
 		setLabel(gbl, gbc, "Price");
 		setTextField(gbl, gbc);
-	
+					
+		// Set Buying label and text field
+		setLabel(gbl, gbc, "Buying date");
+		setTextField(gbl, gbc);
+		
 		
 		
 	 }	
