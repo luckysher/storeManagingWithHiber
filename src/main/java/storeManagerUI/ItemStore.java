@@ -23,7 +23,12 @@ public class ItemStore extends JPanel {
 		gbc.gridwidth = GridBagConstraints.RELATIVE;
 		gbc.gridheight = 1;
 		gbc.fill = GridBagConstraints.BOTH;
-			
+		gbc.ipady = 1;		
+		gbc.weighty = 0.02;
+		gbc.weightx = 0.7;		
+		JLabel label = new JLabel(lname, JLabel.RIGHT);
+		label.setFont(new Font("SansSerif", Font.PLAIN, 16));				
+		addComponent(gbl, gbc, label);		
 	}
 	
 	public void setTextField(GridBagLayout gbl, GridBagConstraints gbc){
