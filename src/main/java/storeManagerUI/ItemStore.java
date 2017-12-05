@@ -60,6 +60,12 @@ public class ItemStore extends JPanel {
 		setLabel(gbl, gbc, "Details");
 		setTextField(gbl, gbc);
 		
+		gbc.insets = new Insets(15, 700, 200, 400);
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridwidth = GridBagConstraints.CENTER;
+		gbc.weighty = 0.05;		
+		JButton button = new JButton("Store info");
+		addComponent(gbl, gbc, button);	
 		
 	 }	
 	}
