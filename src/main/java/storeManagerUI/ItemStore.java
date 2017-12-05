@@ -42,6 +42,9 @@ public class ItemStore extends JPanel {
 		setLabel(gbl, gbc, "Expire");
 		setTextField(gbl, gbc);
 		
+		// Set Details label and text field
+		setLabel(gbl, gbc, "Details");
+		setTextField(gbl, gbc);
 		
 		
 	 }	
