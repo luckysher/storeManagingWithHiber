@@ -26,7 +26,11 @@ public class ItemStore extends JPanel {
 		setToolTipText("Storage form");
 		addTopHeading(gbl, gbc, "Storage form");
 		
-	
+		// Set Name label and text field
+		setLabel(gbl, gbc, "Name");
+		setTextField(gbl, gbc);
+				
+		
 		
 		
 		
