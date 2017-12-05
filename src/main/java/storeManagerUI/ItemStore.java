@@ -16,6 +16,16 @@ import javax.swing.JTextField;
 
 
 public class ItemStore extends JPanel {
+		
+	
+	public void setTextField(GridBagLayout gbl, GridBagConstraints gbc){
+		gbc.insets = new Insets(15, 15, 0, 200);
+		gbc.gridwidth = GridBagConstraints.REMAINDER;		
+		gbc.gridheight = 1;
+		gbc.weighty = 0.03;
+						
+	}
+	
 	
 	public ItemStore(){		
 		GridBagLayout gbl = new GridBagLayout();
