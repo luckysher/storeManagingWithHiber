@@ -30,8 +30,10 @@ public class ItemStore extends JPanel {
 		setLabel(gbl, gbc, "Name");
 		setTextField(gbl, gbc);
 				
-		
-		
+		// Set Name label and text field
+		setLabel(gbl, gbc, "Price");
+		setTextField(gbl, gbc);
+	
 		
 		
 	 }	
