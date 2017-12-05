@@ -17,6 +17,14 @@ import javax.swing.JTextField;
 
 public class ItemStore extends JPanel {
 		
+
+	public void setLabel(GridBagLayout gbl, GridBagConstraints gbc, String lname){
+		gbc.insets = new Insets(15, 50, 0, 20);	
+		gbc.gridwidth = GridBagConstraints.RELATIVE;
+		gbc.gridheight = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+			
+	}
 	
 	public void setTextField(GridBagLayout gbl, GridBagConstraints gbc){
 		gbc.insets = new Insets(15, 15, 0, 200);
