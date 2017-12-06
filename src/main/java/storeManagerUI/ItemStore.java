@@ -55,7 +55,7 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		JTextField tfield = new JTextField();
 		tfield.setFont(new Font("SansSerif", Font.PLAIN, 16));
 		addComponent(gbl, gbc, tfield);
-	
+		return tfield;
 	}
 		
 	public ItemStore(){		
@@ -115,6 +115,6 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		gbc.weighty = 0.04;		
 		JButton button = new JButton("Store info");
 		addComponent(gbl, gbc, button);
-	}
+			}
 		
 	}
