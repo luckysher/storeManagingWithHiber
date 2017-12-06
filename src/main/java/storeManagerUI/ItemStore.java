@@ -128,6 +128,10 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		gbc.weighty = 0.04;		
 		JButton button = new JButton("Store info");
 		addComponent(gbl, gbc, button);
-			}
+		button.addActionListener(this);
+		expire.addItemListener(this);
+	}
+	
+	
 		
 	}
