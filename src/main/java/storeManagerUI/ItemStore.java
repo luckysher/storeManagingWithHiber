@@ -80,7 +80,8 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		this.buydatefield = setTextField(gbl, gbc);
 		
 		// Set Expire label and text field
-			
+		setLabel(gbl, gbc, "Expire");	
+		gbc.insets = new Insets(15, 15, 0, 50);	
 		gbc.fill = GridBagConstraints.BOTH;	
 		JCheckBox expire = new JCheckBox();
 		addComponent(gbl, gbc, expire);
