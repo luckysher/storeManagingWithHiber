@@ -150,5 +150,12 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 			}
 		}
 
-		
+	@Override
+	public void itemStateChanged(ItemEvent evt) {
+		 if (evt.getStateChange() == ItemEvent.SELECTED){
+			 this.expired = true;
+		 }else{
+			 this.expired = false;
+		 }
+		}	
 	}
