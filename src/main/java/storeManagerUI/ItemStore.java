@@ -81,7 +81,11 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		
 		// Set Expire label and text field
 		setLabel(gbl, gbc, "Expire");	
-		gbc.insets = new Insets(15, 15, 0, 50);	
+		gbc.insets = new Insets(15, 15, 0, 50);
+		gbc.gridwidth = GridBagConstraints.REMAINDER;		
+		gbc.gridheight = 1;
+		gbc.weighty = 0.03;
+		gbc.weightx = 0.7;		
 		gbc.fill = GridBagConstraints.BOTH;	
 		JCheckBox expire = new JCheckBox();
 		addComponent(gbl, gbc, expire);
