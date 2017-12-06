@@ -132,6 +132,13 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		expire.addItemListener(this);
 	}
 	
+	public void saveItem(){		
+		String name = this.namefield.getText();
+		System.out.println("Name : " + name);
+		System.out.println("Expired : " + this.expired);
+	}
+		
 	
+
 		
 	}
