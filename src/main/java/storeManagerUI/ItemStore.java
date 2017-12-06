@@ -14,7 +14,12 @@ import javax.swing.JTextField;
 
 
 public class ItemStore extends JPanel implements ActionListener, ItemListener {
-	
+		JTextField namefield;
+		Boolean expired;
+		JTextField buydatefield;
+		JTextArea detailsfield;
+		JTextField pricefield;
+		
 	public void addComponent(GridBagLayout gbl, GridBagConstraints gbc, Component comp){	
 			gbl.setConstraints(comp, gbc);
 			add(comp);
