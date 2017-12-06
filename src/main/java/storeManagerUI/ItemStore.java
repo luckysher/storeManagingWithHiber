@@ -93,7 +93,14 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		JLabel label = new JLabel("Details", JLabel.RIGHT);
 		label.setFont(new Font("SansSerif", Font.PLAIN, 16));				
 		addComponent(gbl, gbc, label);
-	;		
+		
+		gbc.insets = new Insets(15, 15, 0, 350);		
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridwidth = GridBagConstraints.REMAINDER;
+		gbc.weighty = 0.07;		
+		
+		JScrollPane spane = new JScrollPane(tArea);		
+		addComponent(gbl, gbc, spane);		
 		
 		gbc.insets = new Insets(15, 700, 200, 500);
 		gbc.fill = GridBagConstraints.BOTH;
