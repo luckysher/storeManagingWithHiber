@@ -98,7 +98,9 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
 		gbc.weighty = 0.07;		
-		
+		JTextArea tArea = new JTextArea(5, 10);
+		tArea.setWrapStyleWord(true);
+		tArea.setLineWrap(true);
 		JScrollPane spane = new JScrollPane(tArea);		
 		addComponent(gbl, gbc, spane);		
 		
