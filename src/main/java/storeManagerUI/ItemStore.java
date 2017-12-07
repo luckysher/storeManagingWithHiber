@@ -49,6 +49,7 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		formLabel.setFont(new Font("SansSerif", Font.BOLD, 16));
 		addComponent(gbl, gbc, formLabel);		
 	}
+	
 	public void setLabel(GridBagLayout gbl, GridBagConstraints gbc, String lname){
 		gbc.insets = new Insets(15, 50, 0, 20);	
 		gbc.gridwidth = GridBagConstraints.RELATIVE;
@@ -68,8 +69,7 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		gbc.gridheight = 1;
 		gbc.weighty = 0.03;
 		gbc.weightx = 0.7;		
-		gbc.fill = GridBagConstraints.BOTH;
-	
+		gbc.fill = GridBagConstraints.BOTH;	
 		JTextField tfield = new JTextField();
 		tfield.setFont(new Font("SansSerif", Font.PLAIN, 16));
 		addComponent(gbl, gbc, tfield);
@@ -108,8 +108,8 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		gbc.weighty = 0.03;
 		gbc.weightx = 0.7;		
 		gbc.fill = GridBagConstraints.BOTH;	
-		JCheckBox expire = new JCheckBox();
-		addComponent(gbl, gbc, expire);
+		this.expCheck = new JCheckBox();
+		addComponent(gbl, gbc, expCheck);
 			
 		// Set Details label and text field
 		gbc.insets = new Insets(15, 15, 0, 20);		
@@ -124,10 +124,10 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.gridwidth = GridBagConstraints.REMAINDER;
 		gbc.weighty = 0.07;		
-		JTextArea tArea = new JTextArea(5, 10);
-		tArea.setWrapStyleWord(true);
-		tArea.setLineWrap(true);
-		JScrollPane spane = new JScrollPane(tArea);		
+		this.detailsfield = new JTextArea(5, 10);
+		this.detailsfield.setWrapStyleWord(true);
+		this.detailsfield.setLineWrap(true);
+		JScrollPane spane = new JScrollPane(this.detailsfield);		
 		addComponent(gbl, gbc, spane);		
 		
 		gbc.insets = new Insets(15, 700, 200, 500);
@@ -137,22 +137,22 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		JButton button = new JButton("Store info");
 		addComponent(gbl, gbc, button);
 		button.addActionListener(this);
-		expire.addItemListener(this);
+		this.expCheck.addItemListener(this);	
 	}
 	
 	public void saveItem(){		
-		String name = this.namefield.getText();
-		System.out.println("Name : " + name);
-		System.out.println("Expired : " + this.expired);
+		this.storeManager.addStorage(this.namefield.getText().trim(), Integer.parseInt(this.pricefield.getText().trim()), this.buydatefield.getText().trim(), this.expired, this.detailsfield.getText().trim());	
+		JOptionPane.showMessageDialog(this, "Storage Item saved", "Info", JOptionPane.INFORMATION_MESSAGE);
 	}
 	public void showValidationMessage(){
 	   String mesg = "This field can not be blank.";
 	   JOptionPane.showMessageDialog(this, mesg, "error", JOptionPane.ERROR_MESSAGE);
-        }	
+    }
 	public void showValidationMessage(String message){
-            JOptionPane.showMessageDialog(this, message, "error", JOptionPane.ERROR_MESSAGE);
-        }
-  public Boolean validateFormData(){
+      JOptionPane.showMessageDialog(this, message, "error", JOptionPane.ERROR_MESSAGE);
+   }
+   
+   public Boolean validateFormData(){
 	   if (this.namefield.getText().trim().equals("") || this.namefield.getText().trim().length() < 3 ){
 		   this.showValidationMessage("Not a valid storage name: '" + this.namefield.getText().trim() + "'" );
 		   return false;
@@ -170,6 +170,7 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 	   // means form contains valid field values
 	   return true;
    }
+	
    //fun for clearing fields values
    public void clearForm(){
 	   this.namefield.setText("");
@@ -178,7 +179,8 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 	   this.expCheck.setSelected(false);
 	   this.buydatefield.setText("");
    }
-     @Override
+   
+   @Override
    public void actionPerformed(ActionEvent ae) {
 		String command = ae.getActionCommand();
 		if(command == "Store info"){
@@ -189,7 +191,6 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		}	
 	}		
 
-
 	@Override
 	public void itemStateChanged(ItemEvent evt) {
 		 if (evt.getStateChange() == ItemEvent.SELECTED){
@@ -197,5 +198,5 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		 }else{
 			 this.expired = false;
 		 }
-		}	
+	  }
 	}
