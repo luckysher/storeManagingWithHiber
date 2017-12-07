@@ -170,6 +170,15 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 	   // means form contains valid field values
 	   return true;
    }
+   //fun for clearing fields values
+   public void clearForm(){
+	   this.namefield.setText("");
+	   this.pricefield.setText("");
+	   this.detailsfield.setText("");
+	   this.expCheck.setSelected(false);
+	   this.buydatefield.setText("");
+   }
+   
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		String command = ae.getActionCommand();
