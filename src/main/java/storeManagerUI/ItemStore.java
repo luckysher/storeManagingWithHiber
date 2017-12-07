@@ -24,14 +24,16 @@ import utils.StorageUiUtils;
 import logger.LogFactory;
 
 
-
 public class ItemStore extends JPanel implements ActionListener, ItemListener {
+		LogFactory logger;
 		JTextField namefield;
-		Boolean expired;
+		Boolean expired = false;
+		JCheckBox expCheck;
 		JTextField buydatefield;
 		JTextArea detailsfield;
 		JTextField pricefield;
-		
+		StoreManager storeManager;
+	
 	public void addComponent(GridBagLayout gbl, GridBagConstraints gbc, Component comp){	
 			gbl.setConstraints(comp, gbc);
 			add(comp);
@@ -47,7 +49,6 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		formLabel.setFont(new Font("SansSerif", Font.BOLD, 16));
 		addComponent(gbl, gbc, formLabel);		
 	}
-	
 	public void setLabel(GridBagLayout gbl, GridBagConstraints gbc, String lname){
 		gbc.insets = new Insets(15, 50, 0, 20);	
 		gbc.gridwidth = GridBagConstraints.RELATIVE;
