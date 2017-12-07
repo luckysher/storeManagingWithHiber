@@ -162,7 +162,11 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		   return false;
 	   }
 	   
-	 
+	   System.out.println("Buydate: " +  StorageUiUtils.parseDate(this.buydatefield.getText().trim()));
+	   if (this.buydatefield.getText().trim().equals("") || StorageUiUtils.parseDate(this.buydatefield.getText().trim()) == null){
+		   this.showValidationMessage("Not a valid date: '" + this.buydatefield.getText().trim() + "'" );
+		   return false;
+	   }
 	   // means form contains valid field values
 	   return true;
    }
