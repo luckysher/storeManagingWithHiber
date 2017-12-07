@@ -76,23 +76,26 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		return tfield;
 	}
 		
-	public ItemStore(){		
+	public ItemStore(StoreManager storeManager){
+		//initialize store manager
+		this.logger = new LogFactory("StoreUIManager");	
+		this.storeManager = storeManager;
 		GridBagLayout gbl = new GridBagLayout();
 		GridBagConstraints gbc = new GridBagConstraints();		
 		this.setLayout(gbl);   
-			
+				
 		//set main heading
 		setToolTipText("Storage form");
 		addTopHeading(gbl, gbc, "Storage form");
 		
 		// Set Name label and text field
-		setLabel(gbl, gbc, "Name");
+		setLabel(gbl, gbc, "Name");	
 		this.namefield = setTextField(gbl, gbc);
 				
 		// Set Name label and text field
 		setLabel(gbl, gbc, "Price");
 		this.pricefield = setTextField(gbl, gbc);
-					
+				
 		// Set Buying label and text field
 		setLabel(gbl, gbc, "Buying date");
 		this.buydatefield = setTextField(gbl, gbc);
