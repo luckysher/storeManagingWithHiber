@@ -149,6 +149,9 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 	   String mesg = "This field can not be blank.";
 	   JOptionPane.showMessageDialog(this, mesg, "error", JOptionPane.ERROR_MESSAGE);
         }	
+	public void showValidationMessage(String message){
+            JOptionPane.showMessageDialog(this, message, "error", JOptionPane.ERROR_MESSAGE);
+        }
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		String command = ae.getActionCommand();
