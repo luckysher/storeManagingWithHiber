@@ -157,7 +157,12 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		   this.showValidationMessage("Not a valid storage name: '" + this.namefield.getText().trim() + "'" );
 		   return false;
 	   }
+	   if (this.pricefield.getText().trim().equals("") || Integer.parseInt(this.pricefield.getText().trim()) < 0 ){
+		   this.showValidationMessage("Not a valid storage price: '" + this.pricefield.getText().trim() + "'" );
+		   return false;
 	   }
+	   
+	 
 	   // means form contains valid field values
 	   return true;
    }
