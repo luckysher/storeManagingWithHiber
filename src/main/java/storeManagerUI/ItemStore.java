@@ -178,18 +178,17 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 	   this.expCheck.setSelected(false);
 	   this.buydatefield.setText("");
    }
-   
-	@Override
-	public void actionPerformed(ActionEvent ae) {
+     @Override
+   public void actionPerformed(ActionEvent ae) {
 		String command = ae.getActionCommand();
 		if(command == "Store info"){
-			if (this.namefield.getText().equals("")){
-				this.namefield.setBorder(arg0););
-			}else{
-					this.saveItem();
-				}	
-			}
-		}
+			if(this.validateFormData()){
+				this.saveItem();
+				this.clearForm();	
+			}			
+		}	
+	}		
+
 
 	@Override
 	public void itemStateChanged(ItemEvent evt) {
