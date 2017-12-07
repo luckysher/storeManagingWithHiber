@@ -152,6 +152,15 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 	public void showValidationMessage(String message){
             JOptionPane.showMessageDialog(this, message, "error", JOptionPane.ERROR_MESSAGE);
         }
+  public Boolean validateFormData(){
+	   if (this.namefield.getText().trim().equals("") || this.namefield.getText().trim().length() < 3 ){
+		   this.showValidationMessage("Not a valid storage name: '" + this.namefield.getText().trim() + "'" );
+		   return false;
+	   }
+	   }
+	   // means form contains valid field values
+	   return true;
+   }
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		String command = ae.getActionCommand();
