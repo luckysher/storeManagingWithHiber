@@ -145,7 +145,10 @@ public class ItemStore extends JPanel implements ActionListener, ItemListener {
 		System.out.println("Name : " + name);
 		System.out.println("Expired : " + this.expired);
 	}
-		
+	public void showValidationMessage(){
+	   String mesg = "This field can not be blank.";
+	   JOptionPane.showMessageDialog(this, mesg, "error", JOptionPane.ERROR_MESSAGE);
+        }	
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		String command = ae.getActionCommand();
