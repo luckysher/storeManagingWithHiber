@@ -55,5 +55,9 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener {
 	}
 		
 	public ItemUpdate(){		
+		GridBagLayout gbl = new GridBagLayout();
+		GridBagConstraints gbc = new GridBagConstraints();		
+		this.setLayout(gbl);   
+			
 			
 	}
