@@ -67,5 +67,10 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener {
 		// Set Id label and text field
 		setLabel(gbl, gbc, "Id");
 		this.idfield = setTextField(gbl, gbc);
+			
+		// Set Name label and text field
+		setLabel(gbl, gbc, "Name");
+		this.namefield = setTextField(gbl, gbc);
+				
 		
 	}
