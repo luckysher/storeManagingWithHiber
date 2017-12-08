@@ -54,5 +54,6 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener {
 		return tfield;
 	}
 		
-	
+	public ItemUpdate(){		
+			
 	}
