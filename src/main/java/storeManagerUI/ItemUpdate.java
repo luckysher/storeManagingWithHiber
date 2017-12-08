@@ -80,5 +80,25 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener {
 		setLabel(gbl, gbc, "Buying date");
 		this.buydatefield = setTextField(gbl, gbc);
 		
+		// Set Expire label and text field
+		setLabel(gbl, gbc, "Expire");	
+		gbc.insets = new Insets(15, 15, 0, 50);
+		gbc.gridwidth = GridBagConstraints.REMAINDER;		
+		gbc.gridheight = 1;
+		gbc.weighty = 0.03;
+		gbc.weightx = 0.7;		
+		gbc.fill = GridBagConstraints.BOTH;	
+		JCheckBox expire = new JCheckBox();
+		addComponent(gbl, gbc, expire);
 			
+		// Set Details label and text field
+		gbc.insets = new Insets(15, 15, 0, 20);		
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.gridwidth = GridBagConstraints.RELATIVE;
+		gbc.weighty = 0.05;
+		JLabel label = new JLabel("Details", JLabel.RIGHT);
+		label.setFont(new Font("SansSerif", Font.PLAIN, 16));				
+		addComponent(gbl, gbc, label);
+		
+		
 	}
