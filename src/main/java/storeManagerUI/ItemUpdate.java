@@ -40,5 +40,19 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener {
 		addComponent(gbl, gbc, label);		
 	}
 	
+	public JTextField setTextField(GridBagLayout gbl, GridBagConstraints gbc){
+		gbc.insets = new Insets(15, 15, 0, 350);
+		gbc.gridwidth = GridBagConstraints.REMAINDER;		
+		gbc.gridheight = 1;
+		gbc.weighty = 0.03;
+		gbc.weightx = 0.7;		
+		gbc.fill = GridBagConstraints.BOTH;
+	
+		JTextField tfield = new JTextField();
+		tfield.setFont(new Font("SansSerif", Font.PLAIN, 16));
+		addComponent(gbl, gbc, tfield);
+		return tfield;
+	}
+		
 	
 	}
