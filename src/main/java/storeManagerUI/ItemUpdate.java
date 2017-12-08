@@ -59,5 +59,13 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener {
 		GridBagConstraints gbc = new GridBagConstraints();		
 		this.setLayout(gbl);   
 			
-			
+		//set main heading
+		setToolTipText("Update Item form");
+
+		addTopHeading(gbl, gbc, "Update Item Form");
+		
+		// Set Id label and text field
+		setLabel(gbl, gbc, "Id");
+		this.idfield = setTextField(gbl, gbc);
+		
 	}
