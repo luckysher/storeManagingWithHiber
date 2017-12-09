@@ -183,5 +183,13 @@ public void showValidationMessage(){
 			 this.expired = false;
 		 }
 		}
-	
+	public Boolean isValidId(String idStr){
+		if (idStr.equals("")){
+			return false;
+		}			
+		boolean numForm = idStr.matches("[0-9]+");		
+		
+		}
+		return true;
+	}
 	}
