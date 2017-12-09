@@ -121,6 +121,10 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener{
 			@Override
 			public void removeUpdate(DocumentEvent arg0) {searchAndSetValues();}
 		});
+		public void saveItem(){		
+		this.storeManager.addStorage(this.namefield.getText().trim(), Integer.parseInt(this.pricefield.getText().trim()), this.buydatefield.getText().trim(), this.expired, this.detailsfield.getText().trim());	
+		JOptionPane.showMessageDialog(this, "Storage Item saved", "Info", JOptionPane.INFORMATION_MESSAGE);
+	}
 		
 		
 	}
