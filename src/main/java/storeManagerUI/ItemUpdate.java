@@ -201,6 +201,12 @@ public void searchAndSetValues(){
 			int storageId = Integer.parseInt(idstr);
 			item = this.storeManager.getStorageById(storageId);
 		}		
-		
+		if (item.getId() > 0){
+			this.setFormValues(item);
+		}		
+		else{
+			JOptionPane.showMessageDialog(this, "No matching id matches with id:" + idstr, "Info", JOptionPane.INFORMATION_MESSAGE);
+			this.clearForm();
+		}
 	  }
 	}
