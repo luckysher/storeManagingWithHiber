@@ -163,7 +163,9 @@ public void showValidationMessage(){
     public void setFormValues(Item item){		   
     	   this.namefield.setText(item.getName());
 		   this.pricefield.setText(new Integer(item.getPrice()).toString());		   
-		   
+		   this.expCheck.setSelected(item.getExpire());
+		   this.buydatefield.setText(item.getBuyingdate().toString().replace("00:00:00.0", ""));
+		   this.detailsfield.setText(item.getDetails());
 	   }
 		
 		
