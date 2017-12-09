@@ -125,6 +125,13 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener{
 		this.storeManager.addStorage(this.namefield.getText().trim(), Integer.parseInt(this.pricefield.getText().trim()), this.buydatefield.getText().trim(), this.expired, this.detailsfield.getText().trim());	
 		JOptionPane.showMessageDialog(this, "Storage Item saved", "Info", JOptionPane.INFORMATION_MESSAGE);
 	}
+public void showValidationMessage(){
+	   String mesg = "This field can not be blank.";
+	   JOptionPane.showMessageDialog(this, mesg, "error", JOptionPane.ERROR_MESSAGE);
+    }
+	public void showValidationMessage(String message){
+      JOptionPane.showMessageDialog(this, message, "error", JOptionPane.ERROR_MESSAGE);
+   }
 		
 		
 	}
