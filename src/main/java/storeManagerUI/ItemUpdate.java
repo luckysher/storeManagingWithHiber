@@ -175,5 +175,13 @@ public void showValidationMessage(){
 			this.updateItemInfo();
 			}	
 		}
+	@Override
+	public void itemStateChanged(ItemEvent evt) {
+		 if (evt.getStateChange() == ItemEvent.SELECTED){
+			 this.expired = true;
+		 }else{
+			 this.expired = false;
+		 }
+		}
 	
 	}
