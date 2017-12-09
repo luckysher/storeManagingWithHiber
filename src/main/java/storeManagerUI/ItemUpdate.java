@@ -121,10 +121,7 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener{
 			@Override
 			public void removeUpdate(DocumentEvent arg0) {searchAndSetValues();}
 		});
-		public void saveItem(){		
-		this.storeManager.addStorage(this.namefield.getText().trim(), Integer.parseInt(this.pricefield.getText().trim()), this.buydatefield.getText().trim(), this.expired, this.detailsfield.getText().trim());	
-		JOptionPane.showMessageDialog(this, "Storage Item saved", "Info", JOptionPane.INFORMATION_MESSAGE);
-	}
+	
 public void showValidationMessage(){
 	   String mesg = "This field can not be blank.";
 	   JOptionPane.showMessageDialog(this, mesg, "error", JOptionPane.ERROR_MESSAGE);
@@ -167,6 +164,9 @@ public void showValidationMessage(){
 		   this.buydatefield.setText(item.getBuyingdate().toString().replace("00:00:00.0", ""));
 		   this.detailsfield.setText(item.getDetails());
 	   }
-		
+	public void updateItemInfo(){		
+		this.storeManager.addStorage(this.namefield.getText().trim(), Integer.parseInt(this.pricefield.getText().trim()), this.buydatefield.getText().trim(), this.expired, this.detailsfield.getText().trim());	
+		JOptionPane.showMessageDialog(this, "Storage Item saved", "Info", JOptionPane.INFORMATION_MESSAGE);
+	}	
 		
 	}
