@@ -159,7 +159,12 @@ public void showValidationMessage(){
 		   this.expCheck.setSelected(false);
 		   this.buydatefield.setText("");
 	   }
-	
+	 //fun for setting update Item form values
+    public void setFormValues(Item item){		   
+    	   this.namefield.setText(item.getName());
+		   this.pricefield.setText(new Integer(item.getPrice()).toString());		   
+		   
+	   }
 		
 		
 	}
