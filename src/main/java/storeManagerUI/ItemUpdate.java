@@ -106,14 +106,20 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener{
 		this.expCheck.addItemListener(this);
 		this.idfield.getDocument().addDocumentListener(new DocumentListener() {
 			@Override
-			public void changedUpdate(DocumentEvent vent) {}
+			public void changedUpdate(DocumentEvent vent) {searchAndSetValues();}
 
 			@Override
 			public void insertUpdate(DocumentEvent arg0) {
+				try{
+					searchAndSetValues();				
+				}catch(Exception e){
+					logger.info("Exception :%s ", e);
+					e.printStackTrace();
+				}
 			}
 
 			@Override
-			public void removeUpdate(DocumentEvent arg0) {}
+			public void removeUpdate(DocumentEvent arg0) {searchAndSetValues();}
 		});
 		
 		
