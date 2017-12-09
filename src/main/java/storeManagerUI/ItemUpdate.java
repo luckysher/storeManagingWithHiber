@@ -188,7 +188,9 @@ public void showValidationMessage(){
 			return false;
 		}			
 		boolean numForm = idStr.matches("[0-9]+");		
-		
+		if (numForm == false){
+			JOptionPane.showMessageDialog(this, "Please enter e valid id.", "Invalid value", JOptionPane.ERROR_MESSAGE);
+			return false;
 		}
 		return true;
 	}
