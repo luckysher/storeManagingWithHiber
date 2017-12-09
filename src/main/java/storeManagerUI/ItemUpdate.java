@@ -103,6 +103,18 @@ public class ItemUpdate extends JPanel implements ActionListener, ItemListener{
 		JLabel label = new JLabel("Details", JLabel.RIGHT);
 		label.setFont(new Font("SansSerif", Font.PLAIN, 16));				
 		addComponent(gbl, gbc, label);
+		this.expCheck.addItemListener(this);
+		this.idfield.getDocument().addDocumentListener(new DocumentListener() {
+			@Override
+			public void changedUpdate(DocumentEvent vent) {}
+
+			@Override
+			public void insertUpdate(DocumentEvent arg0) {
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent arg0) {}
+		});
 		
 		
 	}
