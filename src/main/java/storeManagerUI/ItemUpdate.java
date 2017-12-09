@@ -151,6 +151,15 @@ public void showValidationMessage(){
 	   // means form contains valid field values
 	   return true;
    }
+	 //fun for clearing fields values
+    public void clearForm(){
+		   this.namefield.setText("");
+		   this.pricefield.setText("");
+		   this.detailsfield.setText("Clear text test");
+		   this.expCheck.setSelected(false);
+		   this.buydatefield.setText("");
+	   }
+	
 		
 		
 	}
