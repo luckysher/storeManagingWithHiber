@@ -194,4 +194,13 @@ public void showValidationMessage(){
 		}
 		return true;
 	}
+public void searchAndSetValues(){		
+		Item item = null;
+		String idstr = this.idfield.getText();
+		if (this.isValidId(idstr)){
+			int storageId = Integer.parseInt(idstr);
+			item = this.storeManager.getStorageById(storageId);
+		}		
+		
+	  }
 	}
