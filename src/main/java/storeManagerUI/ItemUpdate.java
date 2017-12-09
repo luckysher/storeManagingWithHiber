@@ -132,6 +132,25 @@ public void showValidationMessage(){
 	public void showValidationMessage(String message){
       JOptionPane.showMessageDialog(this, message, "error", JOptionPane.ERROR_MESSAGE);
    }
+   
+   public Boolean validateFormData(){
+	   if (this.namefield.getText().trim().equals("") || this.namefield.getText().trim().length() < 3 ){
+		   this.showValidationMessage("Not a valid storage name: '" + this.namefield.getText().trim() + "'" );
+		   return false;
+	   }
+	   if (this.pricefield.getText().trim().equals("") || Integer.parseInt(this.pricefield.getText().trim()) < 0 ){
+		   this.showValidationMessage("Not a valid storage price: '" + this.pricefield.getText().trim() + "'" );
+		   return false;
+	   }
+	   
+	   System.out.println("Buydate: " +  StorageUiUtils.parseDate(this.buydatefield.getText().trim()));
+	   if (this.buydatefield.getText().trim().equals("") || StorageUiUtils.parseDate(this.buydatefield.getText().trim()) == null){
+		   this.showValidationMessage("Not a valid date: '" + this.buydatefield.getText().trim() + "'" );
+		   return false;
+	   }
+	   // means form contains valid field values
+	   return true;
+   }
 		
 		
 	}
